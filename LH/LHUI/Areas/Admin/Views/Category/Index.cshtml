@@ -1,0 +1,63 @@
+﻿@model IEnumerable<LHDAL.DAos.Category>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+<link href="~/css/datatables.min.css" rel="stylesheet" />
+<script src="~/js/datatables.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.dataTables.min.css">
+<script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        //Initialize DataTable with responsive design
+        $("#CatInfo").DataTable({
+            responsive: true,      // enable responsive mode
+            autoWidth: false,      // prevent auto column width issues
+            pageLength: 10,        // default 10 rows per page
+            lengthChange: true,    // allow changing number of rows shown
+            searching: true,       // enable search
+            ordering: true         // enable column sorting
+        });
+    });
+</script>
+
+<br />
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Category</h2>
+    <a asp-controller="Category" asp-action="Create" class="btn btn-secondary">Create New Category</a>
+</div>
+
+<table id="CatInfo" class="table table-responsive table-bordered border-3 border-light table-hover" style="width:100%">
+    <thead class="table-primary">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryDescription)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryDescription)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CategoryId" class="btn btn-secondary">Edit</a> 
+                <a asp-action="Details" asp-route-id="@item.CategoryId" class="btn btn-info">Details</a>
+                <a asp-action="Delete" asp-route-id="@item.CategoryId" class="btn btn-warning">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

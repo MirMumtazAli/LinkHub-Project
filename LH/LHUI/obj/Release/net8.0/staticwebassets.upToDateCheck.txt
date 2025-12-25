@@ -1,0 +1,9 @@
+wwwroot\css\bootstrap.min.css
+wwwroot\css\datatables.min.css
+wwwroot\images\favicon-32x32.png
+wwwroot\js\bootstrap.bundle.min.js
+wwwroot\js\datatables.min.js
+wwwroot\js\jquery.min.js
+wwwroot\js\jquery.validate.min.js
+wwwroot\js\jquery.validate.unobtrusive.min.js
+wwwroot\js\jquery-3.7.1.js

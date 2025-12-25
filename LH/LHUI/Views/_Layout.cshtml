@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <title>CURD</title>
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/jquery.validate.min.js"></script>
+    <script src="~/js/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/png" href="~/images/favicon-32x32.png" />
+
+
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Link Hub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="~/Common/Home/Index">Home</a>
+                    </li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+
+                        @if (User.IsInRole("User") || User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="~/User/BrowseLHUrl/Index">Browse Urls</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="~/User/SubmitLHUrl/Create">Submit Urls</a>
+                            </li>
+                        }
+
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="~/Admin/ApproveLHUrl/Index">Approve Urls</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="~/Admin/Category/Index">Category</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="~/Admin/Category1/Index">Category Jquery</a>
+                            </li>                            
+                        }
+                    }
+                </ul>
+
+                <ul class="navbar-nav ">
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="~/Common/Account/Register">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/Common/Account/Login">Login</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/Common/Account/Logout">Log Out</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Welcome @User.Identity.Name</a>
+                        </li>
+                    }
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        @RenderBody()
+    </div>
+
+</body>
+</html>

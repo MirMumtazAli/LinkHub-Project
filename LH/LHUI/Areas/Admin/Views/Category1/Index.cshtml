@@ -1,0 +1,233 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.dataTables.min.css">
+<script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
+
+<script>
+    $(document).ready(function (){
+
+                $('#createNew').show();
+                $('#update').hide();
+                $('#new').hide();
+
+      var table = $('#categoriesTable').DataTable({
+                    ajax: { url: '/Admin/Category1/GetCategories', dataSrc: '' },
+                    responsive: true,
+                    autoWidth: false,
+                    columns: [
+                                { data: 'categoryId'},
+                            { data: 'categoryName' },
+                            { data: 'categoryDescription' } ,
+                            { data: 'categoryId',
+                                render: function (data) {
+                                            return `<button class="btn btn-warning" data-id="${data}">Edit</button>
+                                                    <button class="btn btn-danger" data-id="${data}">Delete</button>`;},
+                                orderable: false
+                            }
+                            ]
+                    });
+
+
+        // $('#createNew').on('click',function(){
+        //     if($('#CategoryName').val() && $('#CategoryDescription').val())
+        //     {
+        //         $('#msg').addClass('text-success').removeClass('text-danger').html('Record Created Sucessfully!');
+        //     }
+        //     else
+        //     {
+        //     $('#msg').addClass('text-danger').removeClass('text-success').html('Invalid Data!');
+        //     }
+        // });
+
+       $('#update').on('click', function () {
+         if ($('#CategoryName').val() && $('#Description').val()) {
+                $.ajax({
+                        url: '/Admin/Category1/Edit',
+                        type: 'PUT',
+                        dataType: 'JSON',
+                        data: { "categoryId": $('#CategoryId').val(), "categoryName": $('#CategoryName').val(), "categorydescription": $('#Description').val() },
+                        success: function (response) {
+                            if (response.success) {
+                                $('#CategoryId').val('');
+                                $('#CategoryName').val('');
+                                $('#Description').val('');
+                                $('#createNew').show();
+                                $('#update').hide();
+                                $('#new').hide();
+                                $('#msg').addClass('text-success').removeClass('text-danger').html("Record Updated Successfuly!");
+                                table.ajax.reload();
+                                }
+                    else {
+                        $('#msg').addClass('text-danger').removeClass('text-success').html(response.message);
+                        }
+                    }
+                });
+            }
+                else {
+                        $('#msg').addClass('text-danger').removeClass('text-success').html("Invalid data!");
+                     }
+        });
+
+        $('#categoriesTable').on('click', '.btn-danger', function () {
+        var categoryId = $(this).data('id');
+        if (confirm("Are you sure to delete ?")) {
+            $.ajax({
+                url: '/Admin/Category1/Delete/' + categoryId,
+                type: 'Delete',
+                contentType: 'JSON',
+                success: function (response) {
+                    if (response.success) {
+                        $('#msg').addClass('text-success').removeClass('text-danger').html("Record Deleted Successfuly!");
+                        table.ajax.reload();
+                    } else {
+                        $('#msg').addClass('text-danger').removeClass('text-success').html(response.message);
+                    }
+                }
+            });
+        }
+    });
+
+
+        $('#categoriesTable').on('click', '.btn-warning', function () {
+        $('#createModal').modal('show');
+        var categoryId = $(this).data('id');
+        $.ajax({
+            url: '/Admin/Category1/GetCategoryById/' + categoryId,
+            type: 'Get',
+            contentType: 'JSON',
+            success: function (response) {
+                if (response.success) {
+                    $('#CategoryId').val(response.data.categoryId);
+                    $('#CategoryName').val(response.data.categoryName);
+                    $('#Description').val(response.data.categoryDescription);
+                    $('#createNew').hide();
+                    $('#update').show();
+                    $('#new').show();
+                } else {
+                    $('#msg').addClass('text-danger').removeClass('text-success').html(response.message);
+                }
+               }
+            });
+        });
+
+       $('#createNew').on('click',function(){
+        if($('#CategoryName').val() && $('#Description').val() )
+        {
+            // $('#msg').addClass('text-sucess').removeClass('text-danger').html("Record Created Sucessfully");
+            $.ajax({
+                url: '/Admin/Category1/Create',
+                type: 'POST',
+                dataType: 'JSON',
+                data: { "categoryName": $('#CategoryName').val(), "Categorydescription": $('#Description').val() },
+                success: function (response) {
+                    if (response.success) {
+                        $('#CategoryName').val('');
+                        $('#Description').val('');
+                        $('#msg').addClass('text-success').removeClass('text-danger').html("Record Created Successfuly!");
+                        table.ajax.reload();
+                    } else {
+                        $('#msg').addClass('text-danger').removeClass('text-success').html(response.message);
+                    }
+                }
+            });
+
+        }
+        else
+        {
+            $('#msg').addClass('text-danger').removeClass('text-sucess').html("Invalid data!");
+        }
+    });
+
+        $('#new').on('click',function (){
+                 $('#CategoryId').val('');
+                $('#CategoryName').val('');
+                $('#Description').val('');
+                $('#createNew').show();
+                $('#update').hide();
+                $('#new').hide();
+        })
+
+        $('#newCat').on('click',function(){
+            $('#createModal').modal('show');
+            $('#div').html('');
+        })
+
+    });
+</script>
+
+<br />
+<h1>Welcome to Jquery Based Ajax Call</h1>
+<input id="newCat" type="button" value="Create" class="btn btn-primary" />
+
+<div class="p-3 rounded">
+    <table id="categoriesTable" class="table table-bordered border-3 border-light table-hover w-100">
+    <thead class="table-primary">
+        <tr>
+            <th>CategoryId</th>
+            <th>CategoryName</th>
+            <th>Description</th>
+            <th>Action</th>
+
+        </tr>
+    </thead>
+</table>
+</div>
+@* <div>
+    <div id="msg"></div>
+    <input type="hidden" id="CategoryId" name="CategoryId" />
+    <div class="form-group">
+        <label class="control-label">Category Name</label>
+        <input id="CategoryName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label class="control-label">Description</label>
+        <input id="Description" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input id="createNew" type="button" class="btn btn-primary" value="Create" />
+        <input id="update" type="button" class="btn btn-primary" value="Update" />
+        <input id="new" type="button" class="btn btn-primary" value="New" />
+
+    </div>
+
+</div> *@
+
+
+<div class="modal" id="createModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">CRUD Modal</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <div id="msg"></div>
+                    <input type="hidden" id="CategoryId" name="CategoryId" />
+                    <div class="form-group">
+                        <label class="control-label">Category Name</label>
+                        <input id="CategoryName" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Description</label>
+                        <input id="Description" class="form-control" />
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <input id="createNew" type="button" class="btn btn-primary" value="Create" />
+                <input id="update" type="button" class="btn btn-primary" value="Update" />
+                <input id="new" type="button" class="btn btn-primary" value="New" />
+            </div>
+        </div>
+    </div>
+</div>

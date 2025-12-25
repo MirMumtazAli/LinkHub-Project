@@ -1,0 +1,257 @@
+﻿@model IEnumerable<LHUI.Areas.Admin.ViewModel.ApproveLHURLsViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.dataTables.min.css">
+<script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('#pendingInfo').DataTable({responsive:true});
+             $("#SelectAll").click(function (event) {  //on click
+                    if (this.checked) { // check select status
+                        $('.ckb').each(function () { //loop through each checkbox
+                        this.checked = true;  //select all checkboxes with class "checkbox1"
+                        });
+                    } else {
+                    $('.ckb').each(function () { //loop through each checkbox
+                    this.checked = false; //deselect all checkboxes with class "checkbox1"
+                        });
+                    }
+                });
+
+                    $("#Approve").click(function () {
+                    var checkedIds = $(".ckb").filter(":checked").map(function () { return this.id; });
+                        $.ajax({
+                            type: "POST",
+                            url: "/Admin/ApproveLHUrl/ApproveAll",
+                            data: { urlIds: checkedIds.toArray() },
+                            success: function () {
+                            location.reload();
+            }
+        });
+    });
+    });
+    
+    // Approved Table Script
+   
+    $(document).ready(function () {
+
+        // Init Approved DataTable
+        $('#approvedInfo').DataTable({
+            responsive: true,
+            autoWidth: false
+        });
+
+        // Adjust columns when switching tabs
+        $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function () {
+            $('#approvedInfo').DataTable().columns.adjust().responsive.recalc();
+        });
+    });
+
+    
+    // Rejected Table Script
+    
+    $(document).ready(function () {
+
+        // Init Rejected DataTable
+        $('#rejectedInfo').DataTable({
+            responsive: true,
+            autoWidth: false
+        });
+
+        // Adjust columns when switching tabs
+        $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function () {
+            $('#rejectedInfo').DataTable().columns.adjust().responsive.recalc();
+        });
+    });
+</script>
+
+
+<br />
+<br />
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active" data-bs-toggle="tab" href="#pending" aria-selected="true" role="tab">Pending</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" data-bs-toggle="tab" href="#approved" aria-selected="false" tabindex="-1" role="tab">Approved</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" data-bs-toggle="tab" href="#rejected" aria-selected="false" tabindex="-1" role="tab">Rejected</a>
+    </li>
+</ul>
+
+<br />
+
+<div id="myTabContent" class="tab-content">
+   
+    <div class="tab-pane fade show active" id="pending" role="tabpanel">
+        <br />
+        <input type="button" value="Approve" id="Approve" class="btn btn-primary" />
+        <br />
+        <br />
+
+        <table class="table table-responsive table-bordered border-3 border-light table-hover w-100" id="pendingInfo">
+            <thead class="table-primary">
+                <tr>
+                    <th>
+                        <input type="checkbox" id="SelectAll" />
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UrlTitle)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LHUrlName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CategoryName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UserName)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Where(x => x.IsApproved == null))
+                {
+                    <tr>
+                        <td>
+                            @Html.CheckBox(item.UrlId.ToString(), false, new { @class = "ckb", Id = item.UrlId })
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UrlTitle)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LHUrlName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CategoryName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserName)
+                        </td>
+                        <td>
+                            <a asp-action="Approve" asp-route-id="@item.UrlId" class="btn btn-success">Approve</a>
+                            <a asp-action="Reject" asp-route-id="@item.UrlId" class="btn btn-danger">Reject</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="tab-pane fade" id="approved" role="tabpanel">
+        <table class="table table-responsive table-bordered border-3 border-light table-hover w-100" id="approvedInfo">
+            <thead class="table-primary">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UrlTitle)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LHUrlName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CategoryName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UserName)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Where(x => x.IsApproved == true))
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UrlTitle)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LHUrlName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CategoryName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserName)
+                        </td>
+                        <td>
+                            <a asp-action="Approve" asp-route-id="@item.UrlId" class="btn btn-primary disabled">Approved</a>
+                            <a asp-action="Reject" asp-route-id="@item.UrlId" class="btn btn-danger">Reject</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="tab-pane fade" id="rejected" role="tabpanel">
+        <table class="table table-responsive table-bordered border-3 border-light table-hover w-100" id="rejectedInfo">
+            <thead class="table-primary">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UrlTitle)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LHUrlName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CategoryName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UserName)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Where(x => x.IsApproved == false))
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UrlTitle)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LHUrlName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CategoryName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserName)
+                        </td>
+                        <td>
+                            <a asp-action="Approve" asp-route-id="@item.UrlId" class="btn btn-success">Approve</a>
+                            <a asp-action="Reject" asp-route-id="@item.UrlId" class="btn btn-danger disabled">Rejected</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>

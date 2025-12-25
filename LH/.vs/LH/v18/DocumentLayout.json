@@ -1,0 +1,194 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MMA\\Desktop\\My LH\\LH\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{501FCF30-B1B2-408F-8FC5-E3BF9FB10DEF}|LHDAL\\LHDAL.csproj|c:\\users\\mma\\desktop\\my lh\\lh\\lhdal\\daos\\lhuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{501FCF30-B1B2-408F-8FC5-E3BF9FB10DEF}|LHDAL\\LHDAL.csproj|solutionrelative:lhdal\\daos\\lhuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{501FCF30-B1B2-408F-8FC5-E3BF9FB10DEF}|LHDAL\\LHDAL.csproj|c:\\users\\mma\\desktop\\my lh\\lh\\lhdal\\daos\\lhurl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{501FCF30-B1B2-408F-8FC5-E3BF9FB10DEF}|LHDAL\\LHDAL.csproj|solutionrelative:lhdal\\daos\\lhurl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{501FCF30-B1B2-408F-8FC5-E3BF9FB10DEF}|LHDAL\\LHDAL.csproj|c:\\users\\mma\\desktop\\my lh\\lh\\lhdal\\daos\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{501FCF30-B1B2-408F-8FC5-E3BF9FB10DEF}|LHDAL\\LHDAL.csproj|solutionrelative:lhdal\\daos\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43A1E4F4-9622-4607-8202-86FF54062608}|LHUI\\LHUI.csproj|c:\\users\\mma\\desktop\\my lh\\lh\\lhui\\areas\\admin\\controllers\\approvelhurlcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43A1E4F4-9622-4607-8202-86FF54062608}|LHUI\\LHUI.csproj|solutionrelative:lhui\\areas\\admin\\controllers\\approvelhurlcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43A1E4F4-9622-4607-8202-86FF54062608}|LHUI\\LHUI.csproj|c:\\users\\mma\\desktop\\my lh\\lh\\lhui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{43A1E4F4-9622-4607-8202-86FF54062608}|LHUI\\LHUI.csproj|solutionrelative:lhui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{501FCF30-B1B2-408F-8FC5-E3BF9FB10DEF}|LHDAL\\LHDAL.csproj|c:\\users\\mma\\desktop\\my lh\\lh\\lhdal\\repository\\categorydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{501FCF30-B1B2-408F-8FC5-E3BF9FB10DEF}|LHDAL\\LHDAL.csproj|solutionrelative:lhdal\\repository\\categorydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43A1E4F4-9622-4607-8202-86FF54062608}|LHUI\\LHUI.csproj|c:\\users\\mma\\desktop\\my lh\\lh\\lhui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43A1E4F4-9622-4607-8202-86FF54062608}|LHUI\\LHUI.csproj|solutionrelative:lhui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{501FCF30-B1B2-408F-8FC5-E3BF9FB10DEF}|LHDAL\\LHDAL.csproj|c:\\users\\mma\\desktop\\my lh\\lh\\lhdal\\data\\lhdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{501FCF30-B1B2-408F-8FC5-E3BF9FB10DEF}|LHDAL\\LHDAL.csproj|solutionrelative:lhdal\\data\\lhdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:18:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:19:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:20:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LHUser.cs",
+              "DocumentMoniker": "C:\\Users\\MMA\\Desktop\\My LH\\LH\\LHDAL\\DAos\\LHUser.cs",
+              "RelativeDocumentMoniker": "LHDAL\\DAos\\LHUser.cs",
+              "ToolTip": "C:\\Users\\MMA\\Desktop\\My LH\\LH\\LHDAL\\DAos\\LHUser.cs",
+              "RelativeToolTip": "LHDAL\\DAos\\LHUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T15:18:17.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LHUrl.cs",
+              "DocumentMoniker": "C:\\Users\\MMA\\Desktop\\My LH\\LH\\LHDAL\\DAos\\LHUrl.cs",
+              "RelativeDocumentMoniker": "LHDAL\\DAos\\LHUrl.cs",
+              "ToolTip": "C:\\Users\\MMA\\Desktop\\My LH\\LH\\LHDAL\\DAos\\LHUrl.cs",
+              "RelativeToolTip": "LHDAL\\DAos\\LHUrl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T15:18:11.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\MMA\\Desktop\\My LH\\LH\\LHDAL\\DAos\\Category.cs",
+              "RelativeDocumentMoniker": "LHDAL\\DAos\\Category.cs",
+              "ToolTip": "C:\\Users\\MMA\\Desktop\\My LH\\LH\\LHDAL\\DAos\\Category.cs",
+              "RelativeToolTip": "LHDAL\\DAos\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T15:18:09.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApproveLHUrlController.cs",
+              "DocumentMoniker": "C:\\Users\\MMA\\Desktop\\My LH\\LH\\LHUI\\Areas\\Admin\\Controllers\\ApproveLHUrlController.cs",
+              "RelativeDocumentMoniker": "LHUI\\Areas\\Admin\\Controllers\\ApproveLHUrlController.cs",
+              "ToolTip": "C:\\Users\\MMA\\Desktop\\My LH\\LH\\LHUI\\Areas\\Admin\\Controllers\\ApproveLHUrlController.cs",
+              "RelativeToolTip": "LHUI\\Areas\\Admin\\Controllers\\ApproveLHUrlController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T14:31:26.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\MMA\\Desktop\\My LH\\LH\\LHUI\\appsettings.json",
+              "RelativeDocumentMoniker": "LHUI\\appsettings.json",
+              "ToolTip": "C:\\Users\\MMA\\Desktop\\My LH\\LH\\LHUI\\appsettings.json",
+              "RelativeToolTip": "LHUI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAACHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-20T09:57:07.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MMA\\Desktop\\My LH\\LH\\LHUI\\Program.cs",
+              "RelativeDocumentMoniker": "LHUI\\Program.cs",
+              "ToolTip": "C:\\Users\\MMA\\Desktop\\My LH\\LH\\LHUI\\Program.cs",
+              "RelativeToolTip": "LHUI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T09:57:05.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LHDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\MMA\\Desktop\\My LH\\LH\\LHDAL\\Data\\LHDbContext.cs",
+              "RelativeDocumentMoniker": "LHDAL\\Data\\LHDbContext.cs",
+              "ToolTip": "C:\\Users\\MMA\\Desktop\\My LH\\LH\\LHDAL\\Data\\LHDbContext.cs",
+              "RelativeToolTip": "LHDAL\\Data\\LHDbContext.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwA8AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T09:55:08.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CategoryDb.cs",
+              "DocumentMoniker": "C:\\Users\\MMA\\Desktop\\My LH\\LH\\LHDAL\\Repository\\CategoryDb.cs",
+              "RelativeDocumentMoniker": "LHDAL\\Repository\\CategoryDb.cs",
+              "ToolTip": "C:\\Users\\MMA\\Desktop\\My LH\\LH\\LHDAL\\Repository\\CategoryDb.cs",
+              "RelativeToolTip": "LHDAL\\Repository\\CategoryDb.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T04:35:06.712Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 753,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:17:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

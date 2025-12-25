@@ -1,0 +1,71 @@
+﻿@model IEnumerable<LHUI.Areas.Admin.ViewModel.ApproveLHURLsViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.dataTables.min.css">
+<script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
+
+<br />
+<br />
+<form asp-action="GetByStatus" method="post">
+    <select class="form-select" id="status" name="status">
+        <option value="1">Pending</option>
+        <option value="2">Approved</option>
+        <option value="3">Rejected</option>
+    </select>
+    <input type="submit" value="Get By Status" />
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UrlTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LHUrlName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UrlTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LHUrlName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    <a asp-action="Approve" asp-route-id="@item.UrlId">Approve</a>|
+                    <a asp-action="Reject" asp-route-id="@item.UrlId">Reject</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

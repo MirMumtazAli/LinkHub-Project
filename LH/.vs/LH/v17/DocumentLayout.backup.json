@@ -1,0 +1,78 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MMA\\Downloads\\LH\\LH\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{43A1E4F4-9622-4607-8202-86FF54062608}|LHUI\\LHUI.csproj|c:\\users\\mma\\downloads\\lh\\lh\\lhui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{43A1E4F4-9622-4607-8202-86FF54062608}|LHUI\\LHUI.csproj|solutionrelative:lhui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43A1E4F4-9622-4607-8202-86FF54062608}|LHUI\\LHUI.csproj|c:\\users\\mma\\downloads\\lh\\lh\\lhui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43A1E4F4-9622-4607-8202-86FF54062608}|LHUI\\LHUI.csproj|solutionrelative:lhui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{501FCF30-B1B2-408F-8FC5-E3BF9FB10DEF}|LHDAL\\LHDAL.csproj|c:\\users\\mma\\downloads\\lh\\lh\\lhdal\\data\\lhdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{501FCF30-B1B2-408F-8FC5-E3BF9FB10DEF}|LHDAL\\LHDAL.csproj|solutionrelative:lhdal\\data\\lhdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MMA\\Downloads\\LH\\LH\\LHUI\\Program.cs",
+              "RelativeDocumentMoniker": "LHUI\\Program.cs",
+              "ToolTip": "C:\\Users\\MMA\\Downloads\\LH\\LH\\LHUI\\Program.cs",
+              "RelativeToolTip": "LHUI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAYwAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T03:46:50.743Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\MMA\\Downloads\\LH\\LH\\LHUI\\appsettings.json",
+              "RelativeDocumentMoniker": "LHUI\\appsettings.json",
+              "ToolTip": "C:\\Users\\MMA\\Downloads\\LH\\LH\\LHUI\\appsettings.json",
+              "RelativeToolTip": "LHUI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-07T03:47:04.114Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LHDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\MMA\\Downloads\\LH\\LH\\LHDAL\\Data\\LHDbContext.cs",
+              "RelativeDocumentMoniker": "LHDAL\\Data\\LHDbContext.cs",
+              "ToolTip": "C:\\Users\\MMA\\Downloads\\LH\\LH\\LHDAL\\Data\\LHDbContext.cs",
+              "RelativeToolTip": "LHDAL\\Data\\LHDbContext.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAswA8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T03:47:15.241Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+C:\Users\Masi\Desktop\Batch Aug 2025\MVC\LH\LHDAL\bin\Debug\net8.0\LHDAL.deps.json
+C:\Users\Masi\Desktop\Batch Aug 2025\MVC\LH\LHDAL\bin\Debug\net8.0\LHDAL.runtimeconfig.json
+C:\Users\Masi\Desktop\Batch Aug 2025\MVC\LH\LHDAL\bin\Debug\net8.0\LHDAL.dll
+C:\Users\Masi\Desktop\Batch Aug 2025\MVC\LH\LHDAL\bin\Debug\net8.0\LHDAL.pdb
+C:\Users\Masi\Desktop\Batch Aug 2025\MVC\LH\LHDAL\obj\Debug\net8.0\LHDAL.csproj.AssemblyReference.cache
+C:\Users\Masi\Desktop\Batch Aug 2025\MVC\LH\LHDAL\obj\Debug\net8.0\LHDAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Masi\Desktop\Batch Aug 2025\MVC\LH\LHDAL\obj\Debug\net8.0\LHDAL.AssemblyInfoInputs.cache
+C:\Users\Masi\Desktop\Batch Aug 2025\MVC\LH\LHDAL\obj\Debug\net8.0\LHDAL.AssemblyInfo.cs
+C:\Users\Masi\Desktop\Batch Aug 2025\MVC\LH\LHDAL\obj\Debug\net8.0\LHDAL.csproj.CoreCompileInputs.cache
+C:\Users\Masi\Desktop\Batch Aug 2025\MVC\LH\LHDAL\obj\Debug\net8.0\LHDAL.dll
+C:\Users\Masi\Desktop\Batch Aug 2025\MVC\LH\LHDAL\obj\Debug\net8.0\refint\LHDAL.dll
+C:\Users\Masi\Desktop\Batch Aug 2025\MVC\LH\LHDAL\obj\Debug\net8.0\LHDAL.pdb
+C:\Users\Masi\Desktop\Batch Aug 2025\MVC\LH\LHDAL\obj\Debug\net8.0\LHDAL.genruntimeconfig.cache
+C:\Users\Masi\Desktop\Batch Aug 2025\MVC\LH\LHDAL\obj\Debug\net8.0\ref\LHDAL.dll
+C:\Users\MMA\Downloads\LH\LH\LHDAL\bin\Debug\net8.0\LHDAL.deps.json
+C:\Users\MMA\Downloads\LH\LH\LHDAL\bin\Debug\net8.0\LHDAL.runtimeconfig.json
+C:\Users\MMA\Downloads\LH\LH\LHDAL\bin\Debug\net8.0\LHDAL.dll
+C:\Users\MMA\Downloads\LH\LH\LHDAL\bin\Debug\net8.0\LHDAL.pdb
+C:\Users\MMA\Downloads\LH\LH\LHDAL\obj\Debug\net8.0\LHDAL.csproj.AssemblyReference.cache
+C:\Users\MMA\Downloads\LH\LH\LHDAL\obj\Debug\net8.0\LHDAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MMA\Downloads\LH\LH\LHDAL\obj\Debug\net8.0\LHDAL.AssemblyInfoInputs.cache
+C:\Users\MMA\Downloads\LH\LH\LHDAL\obj\Debug\net8.0\LHDAL.AssemblyInfo.cs
+C:\Users\MMA\Downloads\LH\LH\LHDAL\obj\Debug\net8.0\LHDAL.csproj.CoreCompileInputs.cache
+C:\Users\MMA\Downloads\LH\LH\LHDAL\obj\Debug\net8.0\LHDAL.dll
+C:\Users\MMA\Downloads\LH\LH\LHDAL\obj\Debug\net8.0\refint\LHDAL.dll
+C:\Users\MMA\Downloads\LH\LH\LHDAL\obj\Debug\net8.0\LHDAL.pdb
+C:\Users\MMA\Downloads\LH\LH\LHDAL\obj\Debug\net8.0\LHDAL.genruntimeconfig.cache
+C:\Users\MMA\Downloads\LH\LH\LHDAL\obj\Debug\net8.0\ref\LHDAL.dll

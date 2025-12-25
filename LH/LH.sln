@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36511.14 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHDAL", "LHDAL\LHDAL.csproj", "{501FCF30-B1B2-408F-8FC5-E3BF9FB10DEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHUI", "LHUI\LHUI.csproj", "{43A1E4F4-9622-4607-8202-86FF54062608}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{501FCF30-B1B2-408F-8FC5-E3BF9FB10DEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{501FCF30-B1B2-408F-8FC5-E3BF9FB10DEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{501FCF30-B1B2-408F-8FC5-E3BF9FB10DEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{501FCF30-B1B2-408F-8FC5-E3BF9FB10DEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43A1E4F4-9622-4607-8202-86FF54062608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43A1E4F4-9622-4607-8202-86FF54062608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43A1E4F4-9622-4607-8202-86FF54062608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43A1E4F4-9622-4607-8202-86FF54062608}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D456C68B-45A6-41AB-ABBC-8ADAF7CCE34D}
+	EndGlobalSection
+EndGlobal
