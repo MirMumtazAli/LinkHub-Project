@@ -1,4 +1,6 @@
-# Link Hub 🔗
+<div align="center">
+  <h1>Link Hub 🔗</h1>
+</div>
 
 ![Screenshot 1](screenshots/Link%20Hub%20Project%20pdf_page-0001.jpg)
 
